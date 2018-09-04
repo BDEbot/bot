@@ -25,7 +25,7 @@ bot.on('message', message => {
 	var msg = message.content.split(" ");
 	
 	if(msg[0] == "!help"){
-		message.reply('Commande disponible: !inscription\nPour obtenir ton rôle, tu dois indiquer ton nom, prénom, semestre et groupe: \nExemple: !inscription monPrenom monNom S1 G2');
+		message.reply('Commande disponible: !inscription\nPour obtenir ton rôle, tu dois indiquer ton prénom, nom, semestre et groupe: \nExemple: !inscription monPrenom monNom S1 G2');
 		return;
 	}
 
