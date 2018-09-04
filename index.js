@@ -1,4 +1,4 @@
-const Discord = require('discord.js')
+﻿const Discord = require('discord.js')
 const bot = new Discord.Client()
 bot.login('NDg2MjM2NjU4MDE1MDEwODE2.DnBVvQ.2W7U8e8NzPLa-_qOaFAwGn4PJPM')
 
@@ -25,7 +25,7 @@ bot.on('message', message => {
 	var msg = message.content.split(" ");
 	
 	if(msg[0] == "!help"){
-		message.reply('Commande disponible: !inscription\nPour obtenir ton rôle, tu dois indiquer ton nom, prénom, semestre et groupe: \nExemple: !inscription monNom monPrénom S1 G2');
+		message.reply('Commande disponible: !inscription\nPour obtenir ton rôle, tu dois indiquer ton nom, prénom, semestre et groupe: \nExemple: !inscription monPrenom monNom S1 G2');
 		return;
 	}
 
@@ -36,7 +36,7 @@ bot.on('message', message => {
 	
 	
 	if(msg.length != 5){ 
-		message.reply('Mauvais format !\n!inscription nom prenom semestre groupe');
+		message.reply('Mauvais format !\n!inscription prenom nom semestre groupe');
 		return;
 	}
 	
@@ -79,7 +79,7 @@ bot.on('message', message => {
 		message.member.addRole( message.guild.roles.find("name", semestres[indexes[1]].toUpperCase()  + '-' + groupesS1[indexes[0]].toUpperCase() ) );
 		
 	}else {
-		message.reply('Semestres et / ou groupes invalides. Liste des groupes et semestre:\n\nSemestres:\nS1\nS3\n\nGroupes:\nG1\nG2\nG3\nG4\nG5 (attention pas de G5 en S3).\n\nFormat:\n!inscription nom prenom semestre groupe. ');
+		message.reply('Semestres et / ou groupes invalides. Liste des groupes et semestre:\n\nSemestres:\nS1\nS3\n\nGroupes:\nG1\nG2\nG3\nG4\nG5 (attention pas de G5 en S3).\n\nFormat:\n!inscription prenom nom semestre groupe. ');
 	}
 	
 
